@@ -19,6 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/bienvenida', function () {
-    return view('landing-page');
+Route::get('/bienvenida/{nombre}', function ($nombre) {
+    dd($nombre);
+    return view('landing-page', compact('nombre'));//->with(['nombre' => $nombre]);
+});
+
+Route::get('/contacto', function () {
+    return view('contacto');
 });
