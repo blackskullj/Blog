@@ -11,19 +11,16 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('/bienvenida/{nombre}', function ($nombre) {
-    dd($nombre);
-    return view('landing-page', compact('nombre'));//->with(['nombre' => $nombre]);
-});
+Route::get('/bienvenida/{nombre?}/{apellido?}', 'SitioController@bienvenida');
 
-Route::get('/contacto', function () {
-    return view('contacto');
-});
+Route::get('contacto', "SitioController@contacto")->name('contacto');
+
+Route::post('contacto-guardar', 'SitioController@guardaContacto')->name('guardar');
