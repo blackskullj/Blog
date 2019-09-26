@@ -24,3 +24,5 @@ Route::get('/bienvenida/{nombre?}/{apellido?}', 'SitioController@bienvenida');
 Route::get('contacto', "SitioController@contacto")->name('contacto');
 
 Route::post('contacto-guardar', 'SitioController@guardaContacto')->name('guardar');
+
+Route::get('ver-mensajes', 'SitioController@verMensajes')->name('ver-mensajes');

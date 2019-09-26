@@ -13,11 +13,11 @@
                         @csrf
                         <div class="form-group">
                             <label for="exampleInputEmail1">Escribe tu correo</label>
-                            <input type="email" nombre="correo" class="form-control" id="correo" aria-describedby="emailHelp" placeholder="Enter email">
+                            <input type="email" name="correo" class="form-control" id="correo" aria-describedby="emailHelp" placeholder="Enter email">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Escribe tu comentario</label>
-                            <textarea class="form-control" nombre="comentario" id="comentario" rows="3"></textarea>
+                            <textarea class="form-control" name="comentario" id="comentario" rows="3"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Enviar</button>
                     </form>
